@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap');
+
+img {
+    max-width:100%;
+    height:auto;
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wemakeprice-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.4);
+}
+html {
+    scrollbar-width:none;
+}
+
+body {
+    font-family: '', sans-serif;
+    margin: 0;
+    user-select: none;
+    background: #EEEDEB;
+    overflow: auto;
+}
+
+#main {
+    height: 100vh;
+    /*스크롤 적용*/
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    /**/
+}
+
+#start {
+    background: ghostwhite;
+    color: white;
+}
+
+
+.main_title {
+    color: black;
+    font-family: IM_Hyemin-Bold;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.main_description {
+    font-family: Wemakeprice-Regular;
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+}
+
+.information_description {
+    font-family: Wemakeprice-Regular;
+    font-size: 25px;
+}
+
+.information_title {
+    font-family: IM_Hyemin-Bold;
+    font-size: 45px;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*스크롤 적용*/
+    scroll-snap-align: center;
+    /**/
+}
+
+.svg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}   
+
+.skill_description {
+    font-family: Wemakeprice-Regular;
+    font-size: 30px;
+}
+
+#skill_title {
+    font-family: IM_Hyemin-Bold;
+    font-size: 45px;
+}
+
+#skill{
+    background: #292b2f;
+    color: white;
+}
+
+
+#contact {
+    background:ghostwhite;
+    color: white;
+}
+
+#contact_title {
+    font-family: IM_Hyemin-Bold;
+    font-size: 45px;
+    color: black;
+}
+
+#contact-list {
+    font-family: Wemakeprice-Regular;
+    font-size: 25px;
+    color: black;
+}
+
+a {
+    color: #5451ff;
+    text-decoration-line: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    .center_con {
+        margin: 5%;
+    }
+
+    #badge img {
+        height: 20px;
+        width:auto;
+    }
+
+    #skills img {
+        height: 20px;
+        width:auto;
+    }
+
+    .main_title {
+        font-size: 7rem;
+    }
+    
+    .title {
+        font-size: 4rem;
+    }
+
+    .floating-btn {
+        right: 10px;
+    }
+    
+    .zoom:hover {
+        transform: scale(1.2);
+    }
+}
