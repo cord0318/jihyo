@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Jihyo</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2920/2920242.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./script/scroll.js"></script>
+    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+  <script>
+    AOS.init();
+  </script>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">정지효</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <div class="page font">
+        <div id="home" class="center">
+            <div id="animation-hi" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                <img style="width:500px" src="./img/hand.png" alt=""><br>
+                <span style="font-size: 35px;">안녕하세요!</span>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <div id="animation-name" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                <span style="font-size: 35px;">
+                    저는<br>
+                    더욱더 성장하고 싶은<br>
+                    <span style="color: skyblue;">학생 정지효</span>에요.
+                </span>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <div id="animation-skill" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+              <span style="font-size: 35px;">저는 주로<br>
+                <img src="./img/python.svg" style="width: 100px;"></img>
+                <img src="./img/javascript.svg" style="width: 100px;"></img>
+                <img src="./img/java.svg" style="width: 100px;"></img><br>
+                다루고 있습니다!
+              </span>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <div id="animation-description" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+              <span style="font-size: 35px; color: skyblue;">[ TMI ]</span><br><br>
+              <span style="font-size: 25px;" id="my-description"></span>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+    <script>
+      const text_list = ["저는 열심히 한양대 소프트웨어 영재교육원에 합격했습니다!",
+      "저의 나이는 14살입니다! (2009년생)", "저의 꿈은 화이트 해커에요!", "저의 목표는 세종과학교 합격입니다!", "수학은 너무나 재미있죠.."]
+      var text = Math.floor(Math.random() * text_list.length);
+      document.getElementById("my-description").innerHTML = text_list[text];
+    </script>
+</body>
+</html>
