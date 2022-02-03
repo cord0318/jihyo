@@ -1,0 +1,10 @@
+#handImg {
+    width: 300px;
+}
+
+
+@media screen and (max-width: 500px) {
+    #handImg {
+        width: 200px;
+    }
+}
