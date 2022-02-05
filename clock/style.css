@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Time Font';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "Time Font";
+    background-color: black;
+    color: white;
+    user-select: none;
+    text-align: center;
+}
+
+.wrapper {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.clock span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18vw;
+}
+.clock span.time {
+    width: 12vw;
+}
+.day {
+    display: block;
+    font-weight: 300;
+    font-size: 3vw;
+    line-height: 5px;
+}
+
+.world-text {
+    display: block;
+    font-weight: 300;
+    font-size: 3vw;
+    line-height: 5px;
+}
+
+.world {
+    color: skyblue;
+}

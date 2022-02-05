@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid - Jihyo</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1 id="title">[ ▲ 피라미드 텍스트 생성기 ▲ ]</h1>
+
+    <div id="wrapper">
+        <div id="input-area">
+            <form>
+                <input type="text" id="prefix" placeholder="접두사">
+                <input type="text" id="suffix" placeholder="접미사"><br>
+                <input type="text" id="text" placeholder="문장">
+            </form>
+        </div>
+        <div id="buttonWrapper">
+            <button type="button" id="createButton" onclick="CreateClick();">생성</button>
+            <button type="button" id="resetButton" onclick="ResetClick();">리셋</button>
+            <button type="button" id="copyButton" onclick="CopyClick()">복사</button>
+        </div>
+        <div id="resultWrapper">
+            <div id="resultWrapper">
+                <div id="generated">
+                    <h1 id="pyramid"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function ResetClick() {
+            document.getElementById("pyramid").innerText = "";
+        }
+        function CreateClick() {
+            var prefix = document.getElementById("prefix").value;
+            var suffix = document.getElementById("suffix").value;
+            var text = document.getElementById("text").value;
+            var run = createPyramid(text, prefix, suffix);
+        }
+
+        $(function () {
+            $('#copyButton').click(function () {
+ 
+                var copyText = document.getElementById("pyramid");//클립보드에 복사할 텍스트 가져옴
+                var textArea = document.createElement("textarea");//textarea 생성
+      
+                textArea.value = copyText.textContent;//textarea에 텍스트 입력
+                document.body.appendChild(textArea);//body에 textarea 추가
+      
+                textArea.select();//선택
+                document.execCommand("Copy");//복사
+                textArea.remove();//생성한 textarea 삭제
+      
+                Swal.fire(
+                    "복사되었습니다!",
+                    "",
+                    "success"
+                )
+      
+    });
+});
+    </script>
+</body>
+</html>

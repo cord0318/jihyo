@@ -1,0 +1,20 @@
+#contact-title {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#description {
+    font-size: 30px; 
+    color: gray;
+}
+
+@media screen and (max-width: 500px) {
+    #contact-title {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    #description {
+        font-size: 20px; 
+        color: gray;
+    }
+}
