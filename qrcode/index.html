@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRcode - Jihyo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1 id="title">[ QRcode ]</h1>
+    <div id="wrapper">
+        <div id="input-area">
+            <input type="text" id="qrcode-text" placeholder="QRcode에 넣을 값" size="50" onkeyup="if(window.event.keyCode==13){createQRcode()}"/>
+        </div>
+        <div id="buttonWrapper">
+            <button id="createButton" onclick="createQRcode();">QRcode 생성</button>
+        </div>
+        <div id="result-area">
+            <img src="" id="qrcode-img">
+        </div>
+    </div>
+    <script>
+        function createQRcode() {
+            var inputValue = document.getElementById('qrcode-text').value;
+            fetch(`https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${inputValue}`)
+                .then(res => res.blob())
+                .then(blob => {
+                    var url = URL.createObjectURL(blob);
+                    document.getElementById('qrcode-img').src = url;
+                });
+        }
+    </script>
+</body>
+</html>

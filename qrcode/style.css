@@ -12,30 +12,24 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'sweetalert';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+* {
+    font-family: "MainFont";
+    background-color: white;
 }
 
-body {
-    background-color:lightslategray;
-    color: white
-}
 
 #title {
     display: block;
     color: black;
-    font-family: 'Title';
     text-align: center;
-    font-size: 50px;
+    font-family: "Title";
+    font-size: 60px;
 }
 
 #wrapper {
     font-family: "MainFont";
     display: block;
-    color: white;
+    color: black;
 }
 
 #input-area {
@@ -43,10 +37,6 @@ body {
 }
 
 #input-area input {
-    /* border: solid 2px rgb(66, 66, 66);
-    border-radius: 6px;
-    height: 20px; */
-    /* width: 500px; */
     height: 32px;
     font-size: 15px;
     border: 0;
@@ -54,11 +44,6 @@ body {
     outline: none;
     padding-left: 10px;
     background-color: rgb(233, 233, 233);
-}
-
-
-#text {
-    margin: 10px;
 }
 
 #wrapper button {
@@ -93,6 +78,8 @@ body {
 #buttonWrapper {
     display: block;
     text-align: center;
+    margin: 30px;
+    color: white;
 }
 
 #createButton {
@@ -100,12 +87,7 @@ body {
     --button-hover-bg-color: #218838;
 }
 
-#resetButton {
-    --button-bg-color: #dc3545;
-    --button-hover-bg-color: #c82333;
-}
-
-#copyButton {
+#downloadButton {
     --button-bg-color: #007bff;
     --button-hover-bg-color: #0069d9;
 }
@@ -120,38 +102,12 @@ body {
   opacity: 0.5;
 }
 
-.swal2-popup {
-    font-family: "sweetalert";
+#result-area {
+    display: block;
+    text-align: center;
+    margin: 30px;
 }
 
-#prefix, #suffix {
-    width: 200px;
-}
-#text {
-    width: 500px;
-}
-#resultWrapper {
-    margin: auto; margin-top: 10px; border: black; border-radius: 15px; width: 950px; height: 360px; overflow: scroll; text-align: left; background-color: black;
-}
-#generated {
-    resize: none; margin-left: 20px; margin-top: 20px; width: 860px; height: 310px;
-}
-
-@media screen and (max-width: 500px) {
-    #title {
-        display: block;
-        color: black;
-        font-family: 'Title';
-        text-align: center;
-        font-size: 25px;
-    }
-    #prefix, #suffix {
-        width: 100px;
-    }
-    #text {
-        width: 300px;
-    }
-    #resultWrapper {
-        margin: auto; margin-top: 10px; border: black; border-radius: 15px; width: 430px; height: 360px; overflow: scroll; text-align: left; background-color: black;
-    }
+#qrcode-img {
+    margin: 10px;
 }
