@@ -7,9 +7,10 @@
     <title>QRcode - Jihyo</title>
     <link rel="stylesheet" href="./style.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./darkmode.js"></script>
 </head>
 <body>
-    <h1 id="title">[ QRcode ]</h1>
+    <h1 id="title">[ QRcode ]</h1> <!-- <button id="darkmodeButton" class="darkmode_disabled" onclick="clickDarkMode();">다크모드</button> -->
     <div id="wrapper">
         <div id="input-area">
             <input type="text" id="qrcode-text" placeholder="QRcode에 넣을 값" size="50" onkeyup="if(window.event.keyCode==13){createQRcode()}"/>

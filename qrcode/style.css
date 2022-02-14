@@ -46,6 +46,53 @@
     background-color: rgb(233, 233, 233);
 }
 
+body button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background: var(--button-bg-color);
+    color: var(--button-color);
+    
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-family: "MainFont";
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    
+    border: none;
+    border-radius: 15px;
+    
+    display: inline-block;
+    width: auto;
+    
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    cursor: pointer;
+    
+    transition: 0.5s;
+}
+
+body button:active,
+body button:hover,
+body button:focus {
+  background: var(--button-hover-bg-color);
+  outline: 0;
+}
+body button:disabled {
+  opacity: 0.5;
+}
+
+
+#darkmodeButton {
+    --button-bg-color: #292929;
+    --button-hover-bg-color: #000000;
+    color: white;
+}
+
+
 #wrapper button {
     -webkit-appearance: none;
   -moz-appearance: none;
