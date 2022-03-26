@@ -12,6 +12,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Text Font';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #header {
     font-family: 'Nav Font';
 }
@@ -49,4 +56,62 @@ a {
 
 .bold {
     font-weight: bold;
+}
+
+
+#question {
+    font-family: "Text Font";
+    font-size: 70px;
+    color: rgb(26, 24, 24);
+    text-align: center;
+}
+
+#answer {
+    font-family: "Main Font";
+    font-size: 40px;
+}
+
+body button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background: var(--button-bg-color);
+    color: var(--button-color);
+    
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-family: "Main Font";
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    
+    border: none;
+    border-radius: 12px;
+    
+    display: inline-block;
+    width: auto;
+    
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    cursor: pointer;
+    
+    transition: 0.5s;
+}
+
+body button:active,
+body button:hover,
+body button:focus {
+  background: var(--button-hover-bg-color);
+  outline: 0;
+}
+body button:disabled {
+  opacity: 0.5;
+}
+
+#infoButton {
+    --button-bg-color: #007bff;
+    --button-hover-bg-color: #0069d9;
+    color: white;
 }
